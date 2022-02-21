@@ -4,6 +4,7 @@
     <title>My experiment</title>
     <script src="https://unpkg.com/jspsych@7.1.2"></script>
     <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-call-function@1.1.0"></script>
     <link href="https://unpkg.com/jspsych@7.1.2/css/jspsych.css" rel="stylesheet" type="text/css" />
   </head>
   <body></body>
@@ -13,8 +14,18 @@
     const hello_trial = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: 'Hello world!'
-    }
+    };
 
-    jsPsych.run([hello_trial]);
+    function consoleOutput(){
+      var version = jsPsych.version();
+      console.log(version);
+    };
+
+    var sayItOut = {
+         type: "call-function",
+         func: consoleOutput
+     };
+
+    jsPsych.run([hello_trial, sayItOut]);
   </script>
 </html>
