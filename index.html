@@ -17,13 +17,13 @@
       type: jsPsychHtmlKeyboardResponse,
       stimulus: 'Hello world!'
     };
-    push.timeline(hello_trial);
+    timeline.push(hello_trial);
 
     const goodbye_trial = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: 'goodbye world!'
     };
-    push.timeline(goodbye_trial);
+    timeline.push(goodbye_trial);
 
     function consoleOutput(){
       var version = jsPsych.version();
