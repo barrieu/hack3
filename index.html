@@ -11,7 +11,7 @@
   <script>
     const jsPsych = initJsPsych();
 
-    timeline = [];
+    var timeline = [];
 
     const hello_trial = {
       type: jsPsychHtmlKeyboardResponse,
@@ -36,6 +36,7 @@
          type: "call-function",
          func: consoleOutput
      };
+     timeline.push(sayItOut);
 
     jsPsych.run(timeline);
   </script>
