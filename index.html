@@ -16,16 +16,23 @@
       stimulus: 'Hello world!'
     };
 
+    const goodbye_trial = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: 'goodbye world!'
+    };
+
     function consoleOutput(){
       var version = jsPsych.version();
       console.log(version);
     };
+
+
 
     var sayItOut = {
          type: "call-function",
          func: consoleOutput
      };
 
-    jsPsych.run([hello_trial, sayItOut]);
+    jsPsych.run([hello_trial, sayItOut, goodbye_trial]);
   </script>
 </html>
