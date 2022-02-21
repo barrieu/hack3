@@ -11,15 +11,19 @@
   <script>
     const jsPsych = initJsPsych();
 
+    timeline = [];
+
     const hello_trial = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: 'Hello world!'
     };
+    push.timeline(hello_trial);
 
     const goodbye_trial = {
       type: jsPsychHtmlKeyboardResponse,
       stimulus: 'goodbye world!'
     };
+    push.timeline(goodbye_trial);
 
     function consoleOutput(){
       var version = jsPsych.version();
@@ -33,6 +37,6 @@
          func: consoleOutput
      };
 
-    jsPsych.run([hello_trial, sayItOut, goodbye_trial]);
+    jsPsych.run(timeline);
   </script>
 </html>
