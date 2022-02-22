@@ -25,4 +25,6 @@ function initialStuff(){
          func: consoleOutput
      };
      timeline.push(sayItOut);
+
+     return(timeline);
 }
