@@ -12,9 +12,8 @@
   <body></body>
   <script>
 
-    var retVals = initialStuff();
-    const jsPsych  = retVals[0];
-    var timeline = retVals[1];
+    const jsPsych = initJsPsych();
+    var timeline = initialStuff();
 
     jsPsych.run(timeline);
 

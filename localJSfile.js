@@ -1,5 +1,5 @@
-function initialStuff(){
-    const jsPsych = initJsPsych();
+function initialStuff(jsPsych){
+    //const jsPsych = initJsPsych();
 
     var timeline = [];
 
@@ -26,5 +26,5 @@ function initialStuff(){
      };
      timeline.push(sayItOut);
 
-     return jsPsych, timeline;
+     return timeline;
 }
