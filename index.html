@@ -6,38 +6,14 @@
     <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.0"></script>
     <script src="https://unpkg.com/@jspsych/plugin-call-function@1.1.0"></script>
     <link href="https://unpkg.com/jspsych@7.1.2/css/jspsych.css" rel="stylesheet" type="text/css" />
+    <script type = "text/javascript" src="localJSfile.js"></script>
+
   </head>
   <body></body>
   <script>
-    const jsPsych = initJsPsych();
 
-    var timeline = [];
-
-    const hello_trial = {
-      type: jsPsychHtmlKeyboardResponse,
-      stimulus: 'Hello world!'
-    };
-    timeline.push(hello_trial);
-
-    const goodbye_trial = {
-      type: jsPsychHtmlKeyboardResponse,
-      stimulus: 'goodbye world!'
-    };
-    timeline.push(goodbye_trial);
-
-    function consoleOutput(){
-      var version = jsPsych.version();
-      console.log(version);
-    };
-
-
-
-    var sayItOut = {
-         type: jsPsychCallFunction,
-         func: consoleOutput
-     };
-     timeline.push(sayItOut);
-
+    initialStuff();
     jsPsych.run(timeline);
+    
   </script>
 </html>
