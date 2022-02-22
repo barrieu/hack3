@@ -1,4 +1,3 @@
-//function initialStuff(jsPsych){
 function initialStuff(){
 
     var timeline = [];
