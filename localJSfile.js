@@ -1,5 +1,5 @@
-function initialStuff(jsPsych){
-    //const jsPsych = initJsPsych();
+//function initialStuff(jsPsych){
+function initialStuff(){
 
     var timeline = [];
 
