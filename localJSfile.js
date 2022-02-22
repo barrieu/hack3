@@ -26,5 +26,5 @@ function initialStuff(){
      };
      timeline.push(sayItOut);
 
-     return(timeline);
+     return jsPsych, timeline;
 }
